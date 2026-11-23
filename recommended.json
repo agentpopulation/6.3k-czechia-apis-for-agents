@@ -1,0 +1,619 @@
+{
+  "pack": "6.3k-czechia-apis-for-agents",
+  "title": "Czechia API endpoints",
+  "snapshot": "2026-11-16",
+  "tested": {
+    "min": "2026-11-16",
+    "max": "2026-11-16",
+    "text": "16 Nov 2026"
+  },
+  "note": "On the date in last_tested (IST), one GET to the URL, sent with no key, returned HTTP 2xx and a non-empty data body. HTML pages and empty results did not pass. The format column records what came back. This is a test result for that date, not a promise that the URL answers today. Licences, terms, rate limits, accuracy and freshness were not reviewed. Endpoints are URLs, not separate APIs; many share one service.",
+  "licence": "CC BY 4.0: credit AgentPopulation and link https://agentpopulation.com",
+  "focus": "NOT title matches /(?<![a-z])(test|tests|testing|draft|drafts|copy|sample|samples|demo|untitled|scratch|temp|tmp|delete|deleteme|practice|dummy|example|training)(?![a-z])|final_final|\\d{7,}/i AND (NOT url matches ///(services[0-9]*(-[a-z0-9]+)?|utility)\\.arcgis\\.com//i OR NOT service matches /^ArcGIS organization /i)",
+  "buckets": [
+    {
+      "id": "agent",
+      "name": "Agent tools",
+      "title": "Keyless JSON layers and tables an agent can call (Czechia)",
+      "filter": "tags has agent-ready",
+      "endpoints": 6362,
+      "notes": [
+        "6362 of these are map-layer queries that asked for a few records (resultRecordCount); add a where clause or a geometry to ask about one place, and page through for the whole layer."
+      ],
+      "criteria": "Services in this pack with the most endpoints that match this bucket and are tagged agent-ready (no key sent in the test call, JSON body, passed a data call). Ties go to the service with more country codes, then by name. Only services with at least one bucket row that matches the focus rule are listed, and the sample comes from those rows; the counts cover the whole bucket. The sample URL is the first row by URL sort after preferring, in this order: rows that match the bucket's sample preference when it has one, rows that return values rather than describe a dataset or a service (not ERDDAP /info/ pages, OGC GetCapabilities requests, bare OWS addresses, PxWeb tables, UN SDG series lists, Statistics Canada download pointers, WorldPop listings, GTFS validation reports, untitled rows or service root addresses), and agent-ready rows. Sample preference in this bucket: url matches //query\\?/i. Services named \"ArcGIS organization\" hold map layers from many owners and are added only when fewer than 5 other services match.",
+      "services": [
+        {
+          "service": "Statutární město Brno (ArcGIS Online)",
+          "display": "Statutární město Brno (ArcGIS Online)",
+          "host": "services6.arcgis.com",
+          "endpoints_in_bucket": 210,
+          "endpoints_in_pack": 210,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services6.arcgis.com/fUWVlHWZNxUvTUh8/ArcGIS/rest/services/1_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Jihomoravský kraj (ArcGIS Online)",
+          "display": "Jihomoravský kraj (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 150,
+          "endpoints_in_pack": 150,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/uc4BIJvwXwgPHm8D/ArcGIS/rest/services/%C3%9Asp%C4%9B%C5%A1nost_p%C5%99ijet%C3%AD_do_mate%C5%99sk%C3%BDch_%C5%A1kol_v_Jihomoravsk%C3%A9m_kraji_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Úspěšnost_přijetí_do_mateřských_škol_v_Jihomoravském_kraji_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "display": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 128,
+          "endpoints_in_pack": 128,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/ZszVN9lBVA5x4VmX/ArcGIS/rest/services/1432_ExpB_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1432_ExpB_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "4ct s.r.o. (ArcGIS Online)",
+          "display": "4ct s.r.o. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 94,
+          "endpoints_in_pack": 94,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/YElTIrF9aD2PDrLy/ArcGIS/rest/services/Brno_Demolice_budov_%C4%8CD/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Brno_Demolice_budov_ČD",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Pardubický kraj (ArcGIS Online)",
+          "display": "Pardubický kraj (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 86,
+          "endpoints_in_pack": 86,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/S6UQzkU4EoJgYA53/ArcGIS/rest/services/%C5%BDelezni%C4%8Dn%C3%AD_dr%C3%A1ha/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Železniční_dráha",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "ArcGIS Demo portál (ArcGIS Online)",
+          "display": "ArcGIS Demo portál (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 70,
+          "endpoints_in_pack": 70,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/qiROLxpdxrEizyHD/ArcGIS/rest/services/A42vf/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "A42vf",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "display": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 52,
+          "endpoints_in_pack": 52,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/o0IAVZMpUSHwNqMJ/ArcGIS/rest/services/%C4%8COV2_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "ČOV2_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Národní památkový ústav (ArcGIS Online)",
+          "display": "Národní památkový ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 50,
+          "endpoints_in_pack": 50,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/N9lESvcusHT2K1S7/ArcGIS/rest/services/325_2004_Sb/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "325_2004_Sb",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "app",
+      "name": "App features",
+      "title": "Map layers to draw in an app (Czechia)",
+      "filter": "url matches //(Feature|Map)Server//i",
+      "endpoints": 6362,
+      "notes": [],
+      "criteria": "Services in this pack with the most endpoints that match this bucket and passed a data call. Ties go to the service with more country codes, then by name. Only services with at least one bucket row that matches the focus rule are listed, and the sample comes from those rows; the counts cover the whole bucket. The sample URL is the first row by URL sort after preferring, in this order: rows that match the bucket's sample preference when it has one, rows that return values rather than describe a dataset or a service (not ERDDAP /info/ pages, OGC GetCapabilities requests, bare OWS addresses, PxWeb tables, UN SDG series lists, Statistics Canada download pointers, WorldPop listings, GTFS validation reports, untitled rows or service root addresses), and agent-ready rows. Services named \"ArcGIS organization\" hold map layers from many owners and are added only when fewer than 5 other services match.",
+      "services": [
+        {
+          "service": "Statutární město Brno (ArcGIS Online)",
+          "display": "Statutární město Brno (ArcGIS Online)",
+          "host": "services6.arcgis.com",
+          "endpoints_in_bucket": 210,
+          "endpoints_in_pack": 210,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services6.arcgis.com/fUWVlHWZNxUvTUh8/ArcGIS/rest/services/1_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Jihomoravský kraj (ArcGIS Online)",
+          "display": "Jihomoravský kraj (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 150,
+          "endpoints_in_pack": 150,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/uc4BIJvwXwgPHm8D/ArcGIS/rest/services/%C3%9Asp%C4%9B%C5%A1nost_p%C5%99ijet%C3%AD_do_mate%C5%99sk%C3%BDch_%C5%A1kol_v_Jihomoravsk%C3%A9m_kraji_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Úspěšnost_přijetí_do_mateřských_škol_v_Jihomoravském_kraji_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "display": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 128,
+          "endpoints_in_pack": 128,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/ZszVN9lBVA5x4VmX/ArcGIS/rest/services/1432_ExpB_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1432_ExpB_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "4ct s.r.o. (ArcGIS Online)",
+          "display": "4ct s.r.o. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 94,
+          "endpoints_in_pack": 94,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/YElTIrF9aD2PDrLy/ArcGIS/rest/services/Brno_Demolice_budov_%C4%8CD/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Brno_Demolice_budov_ČD",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Pardubický kraj (ArcGIS Online)",
+          "display": "Pardubický kraj (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 86,
+          "endpoints_in_pack": 86,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/S6UQzkU4EoJgYA53/ArcGIS/rest/services/%C5%BDelezni%C4%8Dn%C3%AD_dr%C3%A1ha/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Železniční_dráha",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "ArcGIS Demo portál (ArcGIS Online)",
+          "display": "ArcGIS Demo portál (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 70,
+          "endpoints_in_pack": 70,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/qiROLxpdxrEizyHD/ArcGIS/rest/services/A42vf/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "A42vf",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "display": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 52,
+          "endpoints_in_pack": 52,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/o0IAVZMpUSHwNqMJ/ArcGIS/rest/services/%C4%8COV2_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "ČOV2_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Národní památkový ústav (ArcGIS Online)",
+          "display": "Národní památkový ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 50,
+          "endpoints_in_pack": 50,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/N9lESvcusHT2K1S7/ArcGIS/rest/services/325_2004_Sb/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "325_2004_Sb",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "grounding",
+      "name": "Grounding and data pipelines",
+      "title": "Statistics, boundaries, parcels and inventories for scheduled loads (Czechia)",
+      "filter": "format in (csv, xml, geojson) OR title matches /statist|census|population|boundar|parcel|zoning|district|budget|election|crash|permit|inventory|land ?use|landuse|cadast|address/i",
+      "endpoints": 83,
+      "notes": [],
+      "criteria": "Services in this pack with the most endpoints that match this bucket and passed a data call. Ties go to the service with more country codes, then by name. Only services with at least one bucket row that matches the focus rule are listed, and the sample comes from those rows; the counts cover the whole bucket. The sample URL is the first row by URL sort after preferring, in this order: rows that match the bucket's sample preference when it has one, rows that return values rather than describe a dataset or a service (not ERDDAP /info/ pages, OGC GetCapabilities requests, bare OWS addresses, PxWeb tables, UN SDG series lists, Statistics Canada download pointers, WorldPop listings, GTFS validation reports, untitled rows or service root addresses), and agent-ready rows. Services named \"ArcGIS organization\" hold map layers from many owners and are added only when fewer than 5 other services match.",
+      "services": [
+        {
+          "service": "Jihomoravský kraj (ArcGIS Online)",
+          "display": "Jihomoravský kraj (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 3,
+          "endpoints_in_pack": 150,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/uc4BIJvwXwgPHm8D/ArcGIS/rest/services/Parcely_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Parcely_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "ARCDATA PRAHA, s.r.o. (ArcGIS Online)",
+          "display": "ARCDATA PRAHA, s.r.o. (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 2,
+          "endpoints_in_pack": 30,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/gq83QRPZyW6Vjlnn/arcgis/rest/services/covid19_cze_boundaries/FeatureServer/1/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=5&f=json",
+          "sample_title": "covid19_cze_boundaries - kraje",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Kr Zlinsky",
+          "display": "Kr Zlinsky",
+          "host": "mapy.kr-zlinsky.cz",
+          "endpoints_in_bucket": 1,
+          "endpoints_in_pack": 26,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://mapy.kr-zlinsky.cz/arcgis/rest/services/parcely/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "parcely",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Olomoucký kraj (ArcGIS Online)",
+          "display": "Olomoucký kraj (ArcGIS Online)",
+          "host": "services6.arcgis.com",
+          "endpoints_in_bucket": 1,
+          "endpoints_in_pack": 20,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services6.arcgis.com/KPHdPhzFkBgzGlVf/ArcGIS/rest/services/budovy_ok_statistika/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "budovy_ok_statistika",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Pardubický kraj (ArcGIS Online)",
+          "display": "Pardubický kraj (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 1,
+          "endpoints_in_pack": 86,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/S6UQzkU4EoJgYA53/arcgis/rest/services/PARCELY_ClipCopy/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=5&f=json",
+          "sample_title": "PARCELY_ClipCopy",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Urban Planner (ArcGIS Online)",
+          "display": "Urban Planner (ArcGIS Online)",
+          "host": "services3.arcgis.com",
+          "endpoints_in_bucket": 1,
+          "endpoints_in_pack": 26,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services3.arcgis.com/txiz4oPSebqpNQTJ/ArcGIS/rest/services/parcely_Znojmo/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "parcely_Znojmo",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "ZŠ Vápenná (ArcGIS Online)",
+          "display": "ZŠ Vápenná (ArcGIS Online)",
+          "host": "services4.arcgis.com",
+          "endpoints_in_bucket": 1,
+          "endpoints_in_pack": 8,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services4.arcgis.com/qvM3dujM2P1ChTgX/ArcGIS/rest/services/worldPopulationProjection2100/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "worldPopulationProjection2100",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "name": "Evals and testing",
+      "title": "Varied responses to test tool calls and parsers",
+      "filter": "the whole pack",
+      "endpoints": 6362,
+      "notes": [],
+      "criteria": "Services in this pack that returned the most different formats, then the most endpoints that passed a data call, then by name: a mix of response shapes to test parsers and tool calls. Here the services returned 1 format each, so the order comes down to endpoint counts. Only services with at least one bucket row that matches the focus rule are listed, and the sample comes from those rows; the counts cover the whole bucket. The sample URL is the first row by URL sort after preferring, in this order: rows that match the bucket's sample preference when it has one, rows that return values rather than describe a dataset or a service (not ERDDAP /info/ pages, OGC GetCapabilities requests, bare OWS addresses, PxWeb tables, UN SDG series lists, Statistics Canada download pointers, WorldPop listings, GTFS validation reports, untitled rows or service root addresses), and agent-ready rows. Services named \"ArcGIS organization\" hold map layers from many owners and are added only when fewer than 5 other services match.",
+      "services": [
+        {
+          "service": "Statutární město Brno (ArcGIS Online)",
+          "display": "Statutární město Brno (ArcGIS Online)",
+          "host": "services6.arcgis.com",
+          "endpoints_in_bucket": 210,
+          "endpoints_in_pack": 210,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services6.arcgis.com/fUWVlHWZNxUvTUh8/ArcGIS/rest/services/1_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Jihomoravský kraj (ArcGIS Online)",
+          "display": "Jihomoravský kraj (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 150,
+          "endpoints_in_pack": 150,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/uc4BIJvwXwgPHm8D/ArcGIS/rest/services/%C3%9Asp%C4%9B%C5%A1nost_p%C5%99ijet%C3%AD_do_mate%C5%99sk%C3%BDch_%C5%A1kol_v_Jihomoravsk%C3%A9m_kraji_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Úspěšnost_přijetí_do_mateřských_škol_v_Jihomoravském_kraji_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "display": "Český hydrometeorologický ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 128,
+          "endpoints_in_pack": 128,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/ZszVN9lBVA5x4VmX/ArcGIS/rest/services/1432_ExpB_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "1432_ExpB_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "4ct s.r.o. (ArcGIS Online)",
+          "display": "4ct s.r.o. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 94,
+          "endpoints_in_pack": 94,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/YElTIrF9aD2PDrLy/ArcGIS/rest/services/Brno_Demolice_budov_%C4%8CD/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Brno_Demolice_budov_ČD",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Pardubický kraj (ArcGIS Online)",
+          "display": "Pardubický kraj (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 86,
+          "endpoints_in_pack": 86,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/S6UQzkU4EoJgYA53/ArcGIS/rest/services/%C5%BDelezni%C4%8Dn%C3%AD_dr%C3%A1ha/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "Železniční_dráha",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "ArcGIS Demo portál (ArcGIS Online)",
+          "display": "ArcGIS Demo portál (ArcGIS Online)",
+          "host": "services.arcgis.com",
+          "endpoints_in_bucket": 70,
+          "endpoints_in_pack": 70,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services.arcgis.com/qiROLxpdxrEizyHD/ArcGIS/rest/services/A42vf/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "A42vf",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "display": "Výzkumný ústav vodohospodářský T.G.Masaryka, v.v.i. (ArcGIS Online)",
+          "host": "services5.arcgis.com",
+          "endpoints_in_bucket": 52,
+          "endpoints_in_pack": 52,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services5.arcgis.com/o0IAVZMpUSHwNqMJ/ArcGIS/rest/services/%C4%8COV2_WFL1/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "ČOV2_WFL1",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        },
+        {
+          "service": "Národní památkový ústav (ArcGIS Online)",
+          "display": "Národní památkový ústav (ArcGIS Online)",
+          "host": "services1.arcgis.com",
+          "endpoints_in_bucket": 50,
+          "endpoints_in_pack": 50,
+          "country_codes": [
+            "CZ"
+          ],
+          "formats": [
+            "json"
+          ],
+          "formats_in_pack": 1,
+          "sample_url": "https://services1.arcgis.com/N9lESvcusHT2K1S7/ArcGIS/rest/services/325_2004_Sb/FeatureServer/0/query?where=1%3D1&outFields=*&resultRecordCount=10&f=json",
+          "sample_title": "325_2004_Sb",
+          "sample_format": "json",
+          "sample_last_tested": "2026-11-16"
+        }
+      ]
+    }
+  ]
+}
